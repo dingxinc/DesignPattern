@@ -16,10 +16,10 @@ private:
 	Singleton& operator = (const Singleton&);
 
 public:
-	template <typename... Arg>
-	static T* Instance(Arg... arg) {
+	template <typename... Args>
+	static T* Instance(Args... arg) {
 		if (m_pInstance == nullptr) {
-			m_pInstance = new T(std::forward<Arg>(arg)...);
+			m_pInstance = new T(std::forward<Args>(arg)...);
 		}
 		return m_pInstance;
 	}
