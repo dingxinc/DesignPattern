@@ -7,7 +7,7 @@ private:
 	static T* m_pInstance;
 
 private:
-	Singleton(void);
+	Singleton(void) = default;
 	virtual ~Singleton();
 	Singleton(const Singleton&);
 	Singleton& operator = (const Singleton&);
@@ -26,6 +26,7 @@ public:
 		if (m_pInstance == nullptr) {
 			throw std::logic_error("the instance is not init, please initialize the instance first");
 		}
+        // 饿汉模式，访问单例模式的时候，单例已经被创建出来了
 		return m_pInstance;
 	}
 
