@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "../src/Singleton.cc"
+#include "../src/Singleton.h"
 
 struct A {
 	A(const std::string&) { std::cout << "lvalue" << std::endl; }

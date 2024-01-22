@@ -1,3 +1,6 @@
+#ifndef __SINGLETON_H__
+#define __SINGLETON_H__
+
 #include <utility>
 #include <stdexcept>
 
@@ -38,3 +41,5 @@ public:
 };
 
 template <class T> T* Singleton<T>::m_pInstance = nullptr;
+
+#endif /* __SINGLETON_H__ */
